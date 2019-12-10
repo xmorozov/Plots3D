@@ -4,11 +4,11 @@ clc;clear;close all
 
 %% Function domain
 
-[x,y] = meshgrid(-2:.01:2, -4:.01:4);
+[x,y] = meshgrid(-2:.2:2, -4:.4:4);
 
 %% Function values
 
-z = @(x,y) x.*exp(-x.^2-y.^2);
+z = @(x,y) x*exp(-x^2-y^2)
 
 %% Figure initialization
 
@@ -16,7 +16,7 @@ figure
 
 %% Plotting figure
 
-surf(x,y,z(x,y)) 
+surf() 
 
 %% Title
 
@@ -24,9 +24,7 @@ title("z_B=x exp(-x^2 -y^2)")
 
 %% Labels
 
-xlabel('x_B')
-
-ylabel('y_B')
+xlabel ...
 
 %% Grid
 
@@ -34,8 +32,8 @@ grid on
 
 %% Colormap
 
-colormap autumn
+colormap ...
 
 %% Shading
 
-shading flat
+shading ...
