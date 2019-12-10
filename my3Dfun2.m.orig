@@ -1,5 +1,6 @@
 clc;clear;close all
 
+<<<<<<< HEAD
 %% my3Dfun2
 
 %% Function domain
@@ -9,6 +10,18 @@ clc;clear;close all
 %% Function values
 
 z = @(x,y) sin(sqrt(x.^2+y.^2)+eps)./sqrt(x.^2+y.^2);
+=======
+%% my3Dfun1
+
+%% Function domain
+
+[x,y] = meshgrid(-2:.01:2, -4:.01:4);
+
+
+%% Function values
+
+z = @(x,y) x.*exp(-x.^2-y.^2);
+>>>>>>> 7c1f700c13b9f4da0a4e7cf120ef600dcdeb1938
 
 %% Figure initialization
 
@@ -24,6 +37,7 @@ title("z_B=x exp(-x^2 -y^2)")
 
 %% Labels
 
+<<<<<<< HEAD
 xlabel('x_A')
 
 ylabel('y_A')
@@ -37,8 +51,22 @@ grid on
 %% Colormap
 
 colormap pink
+=======
+xlabel('x-ova os')
+
+ylabel('y-ova os')
+
+zlabel('z-ova os')
+
+%% Grid
+
+grid minor
+
+%% Colormap
+
+colormap autumn
+>>>>>>> 7c1f700c13b9f4da0a4e7cf120ef600dcdeb1938
 
 %% Shading
 
-shading flat
 shading flat
